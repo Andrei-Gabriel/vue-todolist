@@ -44,15 +44,20 @@ const app = new Vue({
     // Inizio metodi
     methods: {
         addTodo: function(){
+            // Aggiunge un elemento solo se è diverso dallo spazio
             if(this.inputValue != ""){
+                // Oltre al testo aggiunge la variabile booleana
                 this.todo.push({text: this.inputValue, done: false});
+                // Dopo l'aggiunta pulisce l'input text
                 this.inputValue = "";
             };
         },
         removeTodo: function(index){
+            // Rimuove n (n = 1) elementi partendo dalla posizione index 
             this.todo.splice(index, 1);
         },
         doneTodo: function(index){
+            // Se la var bool è false allora assegna true altrimenti viceversa
             if(this.todo[index].done == false){
                 this.todo[index].done = true;
             }else{

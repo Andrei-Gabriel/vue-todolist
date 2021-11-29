@@ -30,9 +30,21 @@
 
         <!-- Inizio main -->
         <main>
+            <!-- Se l'array di oggetti è vuoto stampa un messaggio *** -->
             <ul v-if="todo.length > 0">
-                <li v-for="(elem, index) in todo"><span @click="doneTodo(index)" :class="todo[index].done == true ? 'completed-text' : ''">{{elem.text}}</span><div class="icons"><i class="fas fa-check" @click="doneTodo(index)" :class="{completed: todo[index].done}"></i><i class="fas fa-trash-alt" @click="removeTodo(index)"></i></div></li>
+                <!-- Normale ciclo di stampa del contenuto di li (compreso) -->
+                <li v-for="(elem, index) in todo">
+                    <!-- :class Aggiuge classe se (condizione con l'operatore ternario) -->
+                    <span @click="doneTodo(index)" :class="todo[index].done == true ? 'completed-text' : ''">{{elem.text}}</span>
+                    <!-- Inizio contenitore icone -->
+                    <div class="icons">
+                        <!-- :class Aggiunge classe se var bool è true -->
+                        <i class="fas fa-check" @click="doneTodo(index)" :class="{completed: todo[index].done}"></i>
+                        <i class="fas fa-trash-alt" @click="removeTodo(index)"></i>
+                    </div>
+                </li>
             </ul>
+            <!-- Messaggio *** -->
             <h2 v-else>Non c'è nessun todo</h2>
         </main>
     </div>
