@@ -38,10 +38,26 @@ const app = new Vue({
                 text: "Partecipare alla seconda parte della lezione giornaliera",
                 done: false,
             },
-        ]
+        ],
+        inputValue: '',
     },
     // Inizio metodi
     methods: {
-
+        addTodo: function(){
+            if(this.inputValue != ""){
+                this.todo.push({text: this.inputValue, done: false});
+                this.inputValue = "";
+            };
+        },
+        removeTodo: function(index){
+            this.todo.splice(index, 1);
+        },
+        doneTodo: function(index){
+            if(this.todo[index].done == false){
+                this.todo[index].done = true;
+            }else{
+                this.todo[index].done = false;
+            }
+        },
     },
 });

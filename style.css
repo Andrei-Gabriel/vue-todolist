@@ -50,6 +50,11 @@ body{
     main{
         padding: 3px 20px;
     }
+        h2{
+            text-align: center;
+            margin-top: 10px;
+            font-size: 20px;
+        }
         ul{
             list-style-type: none;
         }
@@ -70,4 +75,10 @@ body{
                         font-size: 20px;
                         margin-left: 30px;
                         cursor: pointer;
+                    }
+                    .completed{
+                        color: green;
+                    }
+                    .completed-text{
+                        text-decoration: line-through;
                     }

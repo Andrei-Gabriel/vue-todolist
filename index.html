@@ -23,16 +23,17 @@
         <header>
             <h1>Todo List</h1>
             <div>
-                <input type="text" placeholder="Inserisci un todo">
-                <button>add</button>
+                <input type="text" placeholder="Inserisci un todo" v-model="inputValue" @keyup.enter="addTodo()">
+                <button @click="addTodo()">add</button>
             </div>
         </header>
 
         <!-- Inizio main -->
         <main>
-            <ul>
-                <li v-for="elem in todo"><span>{{elem.text}}</span><div class="icons"><i class="fas fa-check"></i><i class="fas fa-trash-alt"></i></div></li>
+            <ul v-if="todo.length > 0">
+                <li v-for="(elem, index) in todo"><span @click="doneTodo(index)" :class="todo[index].done == true ? 'completed-text' : ''">{{elem.text}}</span><div class="icons"><i class="fas fa-check" @click="doneTodo(index)" :class="{completed: todo[index].done}"></i><i class="fas fa-trash-alt" @click="removeTodo(index)"></i></div></li>
             </ul>
+            <h2 v-else>Non c'è nessun todo</h2>
         </main>
     </div>
 
