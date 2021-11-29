@@ -31,11 +31,7 @@
         <!-- Inizio main -->
         <main>
             <ul>
-                <li><span>Lorem ipsum dolor sit amet consectetur adipisicing.</span><div class="icons"><i class="fas fa-check"></i><i class="fas fa-trash-alt"></i></div></li>
-                <li><span>Lorem ipsum dolor sit amet consectetur adipisicing.</span><div class="icons"><i class="fas fa-check"></i><i class="fas fa-trash-alt"></i></div></li>
-                <li><span>Lorem ipsum dolor sit amet consectetur adipisicing.</span><div class="icons"><i class="fas fa-check"></i><i class="fas fa-trash-alt"></i></div></li>
-                <li><span>Lorem ipsum dolor sit amet consectetur adipisicing.</span><div class="icons"><i class="fas fa-check"></i><i class="fas fa-trash-alt"></i></div></li>
-                <li><span>Lorem ipsum dolor sit amet consectetur adipisicing.</span><div class="icons"><i class="fas fa-check"></i><i class="fas fa-trash-alt"></i></div></li>
+                <li v-for="elem in todo"><span>{{elem.text}}</span><div class="icons"><i class="fas fa-check"></i><i class="fas fa-trash-alt"></i></div></li>
             </ul>
         </main>
     </div>
