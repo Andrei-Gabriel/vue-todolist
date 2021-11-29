@@ -8,13 +8,36 @@
 
     <!-- Link CSS -->
     <link rel="stylesheet" href="style.css">
+    <!-- Link Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
+
 <body>
-    
+    <div class="container" id="root">
+        <!-- Inizio header -->
+        <header>
+            <h1>Todo List</h1>
+            <div>
+                <input type="text" placeholder="Inserisci un todo">
+                <button>add</button>
+            </div>
+        </header>
+        
+        <!-- Inizio main -->
+        <main>
+            <ul>
+                <li><span>Lorem ipsum dolor sit amet consectetur adipisicing.</span><div class="icons"><i class="fas fa-check"></i><i class="fas fa-trash-alt"></i></div></li>
+                <li><span>Lorem ipsum dolor sit amet consectetur adipisicing.</span><div class="icons"><i class="fas fa-check"></i><i class="fas fa-trash-alt"></i></div></li>
+                <li><span>Lorem ipsum dolor sit amet consectetur adipisicing.</span><div class="icons"><i class="fas fa-check"></i><i class="fas fa-trash-alt"></i></div></li>
+                <li><span>Lorem ipsum dolor sit amet consectetur adipisicing.</span><div class="icons"><i class="fas fa-check"></i><i class="fas fa-trash-alt"></i></div></li>
+                <li><span>Lorem ipsum dolor sit amet consectetur adipisicing.</span><div class="icons"><i class="fas fa-check"></i><i class="fas fa-trash-alt"></i></div></li>
+            </ul>
+        </main>
+    </div>
 
     <!-- Script VueJS -->
     <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
     <!-- Script JS -->
-    <script src="scrit.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
